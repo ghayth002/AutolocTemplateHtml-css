@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLoc - Location de voitures</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-car"></i> AutoLoc
+                </a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="vehicules.html">Nos Véhicules</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="connexion.html">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Connexion</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="inscription.html">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Inscription</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Location de voitures simple et rapide</h1>
+                <p>Découvrez notre sélection de véhicules et profitez d'une expérience de location sans tracas. Prix compétitifs et service client exceptionnel.</p>
+                <div class="hero-buttons">
+                    <a href="vehicules.html" class="btn btn-primary">Voir nos véhicules</a>
+                    <a href="inscription.html" class="btn btn-outline">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Pourquoi nous choisir ?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-car-side"></i>
+                    <h3>Large choix de véhicules</h3>
+                    <p>Des citadines aux SUV, trouvez le véhicule parfait pour vos besoins.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-euro-sign"></i>
+                    <h3>Prix compétitifs</h3>
+                    <p>Des tarifs transparents et adaptés à tous les budgets.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Service client 24/7</h3>
+                    <p>Une assistance disponible à tout moment pour vous accompagner.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Comment ça marche ?</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Créez votre compte</h3>
+                    <p>Inscrivez-vous en quelques clics pour accéder à nos services.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-car"></i>
+                    <h3>Choisissez votre véhicule</h3>
+                    <p>Sélectionnez parmi notre large gamme de véhicules.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-key"></i>
+                    <h3>Récupérez les clés</h3>
+                    <p>Prenez possession de votre véhicule à l'agence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>À propos d'AutoLoc</h5>
+                    <p>AutoLoc est votre partenaire de confiance pour la location de véhicules. Nous nous engageons à fournir un service de qualité et des véhicules fiables.</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Contactez-nous</h5>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                        <li><i class="fas fa-envelope"></i> contact@autoloc.fr</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Rue de la Location, 75000 Paris</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Liens rapides</h5>
+                    <ul class="quick-links">
+                        <li><a href="vehicules.html">Nos véhicules</a></li>
+                        <li><a href="inscription.html">S'inscrire</a></li>
+                        <li><a href="connexion.html">Se connecter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoLoc. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

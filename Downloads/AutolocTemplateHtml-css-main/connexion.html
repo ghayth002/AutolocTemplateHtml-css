@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLoc - Connexion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-car"></i> AutoLoc
+                </a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="vehicules.html">Nos Véhicules</a>
+                    </li>
+                    <li>
+                        <a class="nav-link auth-link active" href="connexion.html">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="mobile-only">Mon Compte</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Form -->
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2 class="text-center">Connexion</h2>
+            <form id="loginForm" onsubmit="return validateForm(this)">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Mot de passe" required>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Se souvenir de moi
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+                <p class="text-center mt-3">
+                    <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                </p>
+                <p class="text-center">
+                    Pas encore de compte ? <a href="inscription.html">S'inscrire</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>À propos d'AutoLoc</h5>
+                    <p>AutoLoc est votre partenaire de confiance pour la location de véhicules. Nous nous engageons à fournir un service de qualité et des véhicules fiables.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Contactez-nous</h5>
+                    <p>
+                        <i class="fas fa-phone"></i> +33 1 23 45 67 89<br>
+                        <i class="fas fa-envelope"></i> contact@autoloc.fr<br>
+                        <i class="fas fa-map-marker-alt"></i> 123 Rue de la Location, 75000 Paris
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2024 AutoLoc. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        function validateForm(form) {
+            // Add your form validation logic here
+            return false; // Prevent form submission for demo
+        }
+    </script>
+</body>
+</html>

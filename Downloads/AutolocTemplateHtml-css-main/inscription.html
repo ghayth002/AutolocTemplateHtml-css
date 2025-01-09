@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLoc - Inscription</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-car"></i> AutoLoc
+                </a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li>
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="vehicules.html">Nos Véhicules</a>
+                    </li>
+                    <li>
+                        <a class="nav-link auth-link active" href="inscription.html">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="mobile-only">Mon Compte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="connexion.html">Connexion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2 class="text-center">Inscription</h2>
+            <form id="registrationForm" onsubmit="return validateForm(this)">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Prénom" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nom" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control" placeholder="Téléphone" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" placeholder="Adresse" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Numéro de permis" required>
+                </div>
+                <div class="form-group">
+                    <label>Date d'obtention du permis</label>
+                    <input type="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Mot de passe" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Confirmer le mot de passe" required>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        J'accepte les conditions générales d'utilisation
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Créer mon compte</button>
+                <p class="text-center mt-3">
+                    Déjà inscrit ? <a href="connexion.html">Se connecter</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>AutoLoc</h5>
+                    <p>Votre partenaire de confiance pour la location de véhicules.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: contact@autoloc.fr<br>
+                    Tél: 01 23 45 67 89</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liens utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Mentions légales</a></li>
+                        <li><a href="#" class="text-white">CGV</a></li>
+                        <li><a href="#" class="text-white">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        function validateForm(form) {
+            // Add your form validation logic here
+            return false; // Prevent form submission for demo
+        }
+    </script>
+</body>
+</html>
